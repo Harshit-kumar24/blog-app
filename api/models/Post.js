@@ -1,30 +1,30 @@
+//In models you define your database the schema of your data
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema(
-  {
-    title: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    desc: {
-      type: String,
-      required: true,
-    },
-    photo: {
-      type: String,
-      required: false,
-    },
-    username: {
-      type: String,
-      required: true,
-    },
-    categories: {
-      type: Array,
-      required: false,
-    },
-  },
-  { timestamps: true }
-);
+    {
+        title:{
+            type:String,
+            required:true,
+            unique:true
+        },
+        desc:{
+            type:String,
+            required:true
+        },
+        photo:{
+            type:String,
+            required:true
+        },
+        username:{
+            type:String,
+            required:true,
+        },
+        categories:{ 
+            type:Array,
+            required:false
+        }
 
-module.exports = mongoose.model("Post", PostSchema);
+    },{timestamps: true});
+
+module.exports = mongoose.model("Post",PostSchema);

@@ -1,7 +1,6 @@
 // In routes you create your routes and perform request like create,read,update,delete
 const router = require("express").Router();
 const User = require("../models/User");
-const bcrypt = require("bcrypt");
 const Post = require("../models/Post");
 
 //CREATE USER
